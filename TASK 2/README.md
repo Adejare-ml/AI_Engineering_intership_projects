@@ -170,6 +170,9 @@ This is why AI responses appear word-by-word when you watch them generate in rea
 ## 6. Visual Diagram
 
 ![LLM Pipeline](llm_pipeline.jpg)
+---
+
+---
 A colour-coded interactive version of this diagram is available as `llm_pipeline.drawio`.
 Open it at [app.diagrams.net](https://app.diagrams.net) — no login required.
 
