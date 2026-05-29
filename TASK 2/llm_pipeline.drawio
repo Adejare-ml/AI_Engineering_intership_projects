@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" agent="Claude">
+  <diagram name="LLM Pipeline" id="llm-pipeline">
+    <mxGraphModel dx="1144" dy="676" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1a1a2e;" value="How a Large Language Model (LLM) Processes Text" vertex="1">
+          <mxGeometry height="40" width="600" x="125" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="step1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;arcSize=15;verticalAlign=middle;align=center;" value="&lt;b&gt;&amp;nbsp;Input Text&lt;/b&gt;&lt;br&gt;&lt;i&gt;e.g. &quot;The cat sat on the mat&quot;&lt;/i&gt;" vertex="1">
+          <mxGeometry height="60" width="350" x="250" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="note1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#666666;fontStyle=2;" value="Your raw sentence enters the model." vertex="1">
+          <mxGeometry height="25" width="450" x="200" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="arr1" edge="1" parent="1" source="step1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#555555;strokeWidth=2;" target="step2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="step2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;arcSize=15;verticalAlign=middle;align=center;" value="&lt;b&gt;Tokenization&lt;/b&gt;&lt;br&gt;&lt;i&gt;&quot;The&quot; | &quot;cat&quot; | &quot;sat&quot; | &quot;on&quot; | &quot;the&quot; | &quot;mat&quot;&lt;/i&gt;" vertex="1">
+          <mxGeometry height="60" width="350" x="250" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="note2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#666666;fontStyle=2;" value="Words are split into small pieces and converted into numbers the computer can read." vertex="1">
+          <mxGeometry height="25" width="550" x="150" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="arr2" edge="1" parent="1" source="step2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#555555;strokeWidth=2;" target="step3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="step3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;arcSize=15;verticalAlign=middle;align=center;" value="&lt;b&gt;&amp;nbsp;Attention&lt;/b&gt;&lt;br&gt;&lt;i&gt;Each token looks at every other token&lt;/i&gt;" vertex="1">
+          <mxGeometry height="60" width="350" x="250" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="note3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#666666;fontStyle=2;" value="The model figures out which words are most important and related to each other." vertex="1">
+          <mxGeometry height="25" width="550" x="150" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="arr3" edge="1" parent="1" source="step3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#555555;strokeWidth=2;" target="step4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="step4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;arcSize=15;verticalAlign=middle;align=center;" value="&lt;b&gt;&amp;nbsp;Transformer Layers&lt;/b&gt;&lt;br&gt;&lt;i&gt;Block 1 → Block 2 → Block 3 → … → Block N&lt;/i&gt;" vertex="1">
+          <mxGeometry height="60" width="350" x="250" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="note4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#666666;fontStyle=2;" value="Many stacked blocks each run attention + a small network to build a deeper understanding." vertex="1">
+          <mxGeometry height="25" width="600" x="125" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="arr4" edge="1" parent="1" source="step4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#555555;strokeWidth=2;" target="step5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="step5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;arcSize=15;verticalAlign=middle;align=center;" value="&lt;b&gt;&amp;nbsp;Output&lt;/b&gt;&lt;br&gt;&lt;i&gt;Generated text, one token at a time&lt;/i&gt;" vertex="1">
+          <mxGeometry height="60" width="350" x="250" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="note5" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#666666;fontStyle=2;" value="The model predicts the most likely next word and produces its final response." vertex="1">
+          <mxGeometry height="25" width="550" x="150" y="645" as="geometry" />
+        </mxCell>
+        <mxCell id="callout1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#c0c0c0;fontSize=11;arcSize=10;" value="&lt;b&gt;Token example:&lt;/b&gt;&lt;br&gt;&quot;playing&quot; → &quot;play&quot; + &quot;ing&quot;" vertex="1">
+          <mxGeometry height="50" width="160" x="650" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="callout2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#c0c0c0;fontSize=11;arcSize=10;" value="&lt;b&gt;Attention example:&lt;/b&gt;&lt;br&gt;&quot;it&quot; refers to → &quot;cat&quot; (high weight)" vertex="1">
+          <mxGeometry height="50" width="160" x="650" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="callout3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#c0c0c0;fontSize=11;arcSize=10;" value="&lt;b&gt;Scale:&lt;/b&gt;&lt;br&gt;GPT-3 has ~96 transformer layers" vertex="1">
+          <mxGeometry height="50" width="160" x="650" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="conn1" edge="1" parent="1" source="step2" style="edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;strokeColor=#c0c0c0;strokeWidth=1;dashed=1;" target="callout1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn2" edge="1" parent="1" source="step3" style="edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;strokeColor=#c0c0c0;strokeWidth=1;dashed=1;" target="callout2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn3" edge="1" parent="1" source="step4" style="edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;strokeColor=#c0c0c0;strokeWidth=1;dashed=1;" target="callout3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
