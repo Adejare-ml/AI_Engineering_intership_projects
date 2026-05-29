@@ -182,64 +182,7 @@ This is why AI responses appear word-by-word when you watch them generate in rea
 
 ---
 
-## 7. Visual Diagram
 
-The diagram below shows the full pipeline from input to output.
-
-```
-┌─────────────────────────────────────────┐
-│ 📝 Input Text │
-│ e.g. "The cat sat on the mat" │
-└──────────────────┬──────────────────────┘
- │
- Your raw sentence enters the model
- │
- ▼
-┌─────────────────────────────────────────┐
-│ 🔤 Tokenization │
-│ "The" | "cat" | "sat" | "on" | "mat" │
-│ Each piece → converted to numbers │
-└──────────────────┬──────────────────────┘
- │
- Words split into pieces, turned into numbers
- │
- ▼
-┌─────────────────────────────────────────┐
-│ 🔍 Attention │
-│ Every token looks at every other │
-│ token and scores its relevance │
-└──────────────────┬──────────────────────┘
- │
- Model learns which words relate to which
- │
- ▼
-┌─────────────────────────────────────────┐
-│ 🧱 Transformer Layers │
-│ ┌───────────────────────────────────┐ │
-│ │ Block 1 — basic grammar │ │
-│ ├───────────────────────────────────┤ │
-│ │ Block 2 — phrases & structure │ │
-│ ├───────────────────────────────────┤ │
-│ │ Block 3 — context & meaning │ │
-│ ├───────────────────────────────────┤ │
-│ │ ... │ │
-│ ├───────────────────────────────────┤ │
-│ │ Block N — tone, intent, nuance │ │
-│ └───────────────────────────────────┘ │
-└──────────────────┬──────────────────────┘
- │
- Each block deepens the model's understanding
- │
- ▼
-┌─────────────────────────────────────────┐
-│ 💬 Output │
-│ Generated text, one token at a time │
-│ Model picks next word → repeats │
-└─────────────────────────────────────────┘
-```
-
-A colour-coded interactive version of this diagram is available as `llm_pipeline.drawio`.
-Open it at [app.diagrams.net](https://app.diagrams.net) — no login required.
 
 ---
 
@@ -265,4 +208,4 @@ project/
 
 ---
 
-*Written for academic submission. All explanations are original and based on the referenced resources above.*
+*Written by Adelugba Adejare*
