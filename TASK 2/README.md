@@ -184,6 +184,8 @@ This is why AI responses appear word-by-word when you watch them generate in rea
 
 ## 7. Visual Diagram
 
+![LLM Pipeline](llm_pipeline.jpg)
+
 The diagram below shows the full pipeline from input to output.
 
 ```
