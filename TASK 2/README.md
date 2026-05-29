@@ -14,9 +14,7 @@
 4. [What Are Transformer Layers?](#3-what-are-transformer-layers)
 5. [How They Work Together](#4-how-they-work-together)
 6. [The Pipeline — Step by Step](#5-the-pipeline--step-by-step)
-7. [Quick-Reference Glossary](#6-quick-reference-glossary)
-8. [Visual Diagram](#7-visual-diagram)
-9. [References](#8-references)
+7. [References](#8-references)
 
 ---
 
@@ -166,94 +164,25 @@ This is why AI responses appear word-by-word when you watch them generate in rea
 
 ---
 
-## 6. Quick-Reference Glossary
-
-| Term | Simple Definition |
-|------|-------------------|
-| **Token** | A small chunk of text (word, part-word, or character) that the model processes as a unit |
-| **Embedding** | A list of numbers that represents a token's meaning in a way the model can use |
-| **Attention** | A mechanism that scores how relevant each token is to every other token |
-| **Attention weight** | A score (0 to 1) showing how much one token should "pay attention" to another |
-| **Transformer block** | A single processing unit that runs attention + a feed-forward network |
-| **Feed-forward network** | A small neural network inside each transformer block that refines the token's representation |
-| **LLM** | Large Language Model — a deep learning model trained on massive amounts of text |
-| **Vector** | A list of numbers used to represent data (e.g. a token's meaning) |
-| **Context window** | The maximum number of tokens an LLM can process in a single input |
 
 ---
 
-## 7. Visual Diagram
+## 6. Visual Diagram
 
 ![LLM Pipeline](llm_pipeline.jpg)
-
-The diagram below shows the full pipeline from input to output.
-
-```
-┌─────────────────────────────────────────┐
-│ 📝 Input Text │
-│ e.g. "The cat sat on the mat" │
-└──────────────────┬──────────────────────┘
- │
- Your raw sentence enters the model
- │
- ▼
-┌─────────────────────────────────────────┐
-│ 🔤 Tokenization │
-│ "The" | "cat" | "sat" | "on" | "mat" │
-│ Each piece → converted to numbers │
-└──────────────────┬──────────────────────┘
- │
- Words split into pieces, turned into numbers
- │
- ▼
-┌─────────────────────────────────────────┐
-│ 🔍 Attention │
-│ Every token looks at every other │
-│ token and scores its relevance │
-└──────────────────┬──────────────────────┘
- │
- Model learns which words relate to which
- │
- ▼
-┌─────────────────────────────────────────┐
-│ 🧱 Transformer Layers │
-│ ┌───────────────────────────────────┐ │
-│ │ Block 1 — basic grammar │ │
-│ ├───────────────────────────────────┤ │
-│ │ Block 2 — phrases & structure │ │
-│ ├───────────────────────────────────┤ │
-│ │ Block 3 — context & meaning │ │
-│ ├───────────────────────────────────┤ │
-│ │ ... │ │
-│ ├───────────────────────────────────┤ │
-│ │ Block N — tone, intent, nuance │ │
-│ └───────────────────────────────────┘ │
-└──────────────────┬──────────────────────┘
- │
- Each block deepens the model's understanding
- │
- ▼
-┌─────────────────────────────────────────┐
-│ 💬 Output │
-│ Generated text, one token at a time │
-│ Model picks next word → repeats │
-└─────────────────────────────────────────┘
-```
-
 A colour-coded interactive version of this diagram is available as `llm_pipeline.drawio`.
 Open it at [app.diagrams.net](https://app.diagrams.net) — no login required.
 
 ---
 
-## 8. References
+## 7. References
 
 | # | Resource | Author / Source | Used For |
 |---|----------|-----------------|----------|
 | 1 | [Transformers & Attention (Video)](https://youtu.be/eMlx5fFNoYc) | 3Blue1Brown | Conceptual foundation for attention and transformer stacks |
-| 2 | [How LLMs Work — Beginner Overview (Video)](https://youtu.be/5sLY9aB5ZCo) | YouTube | Plain-language framing of the end-to-end pipeline |
-| 3 | [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) | Jay Alammar | Technical detail on encoder/decoder structure and self-attention |
-| 4 | [Embeddings & Tokenization Guide](https://platform.openai.com/docs/guides/embeddings) | OpenAI | Tokenization concept and number-vector conversion |
-| 5 | [Transformers Documentation](https://huggingface.co/docs/transformers/index) | Hugging Face | Definition of transformer as the framework for state-of-the-art LLMs |
+| 2 | [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) | Jay Alammar | Technical detail on encoder/decoder structure and self-attention |
+| 3| [Embeddings & Tokenization Guide](https://platform.openai.com/docs/guides/embeddings) | OpenAI | Tokenization concept and number-vector conversion |
+| 4 | [Transformers Documentation](https://huggingface.co/docs/transformers/index) | Hugging Face | Definition of transformer as the framework for state-of-the-art LLMs |
 
 ---
 
@@ -262,9 +191,9 @@ Open it at [app.diagrams.net](https://app.diagrams.net) — no login required.
 ```
 project/
 ├── README.md ← This file
-└── llm_pipeline.drawio ← Editable diagram (open in diagrams.net)
+└── llm_pipeline.drawio ← Editable diagram (open in diagrams.net) and  jpg
 ```
 
 ---
 
-*Written for academic submission. All explanations are original and based on the referenced resources above.*
+*Written by Adelugba adejare*
