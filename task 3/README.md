@@ -126,6 +126,6 @@ langchainbot/
 
 ## Notes
 
-- **Model** — `gemini-2.0-flash` is fast and free-tier eligible. For more detailed responses, swap to `gemini-1.5-pro` or `gemini-2.5-flash` in Cell 3.
+- **Model** — `gemini-2.5-flash` is fast and free-tier eligible. For more detailed responses, swap to `gemini-1.5-pro`  in Cell 3.
 - **Memory scope** — `ChatMessageHistory` is in-memory only. Sessions are lost when the Jupyter kernel restarts.
 - **Rate limits** — Gemini's free tier resets daily. If you hit a quota error, wait and retry, or check your usage at [https://aistudio.google.com](https://aistudio.google.com).
