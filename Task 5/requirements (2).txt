@@ -1,0 +1,19 @@
+# Task 5: Semantic Similarity Search
+# Python 3.10+
+
+# ── Core ─────────────────────────────────────────────────────────────────────
+sentence-transformers==2.7.0      # sentence encoder — all-MiniLM-L6-v2
+faiss-cpu==1.8.0                  # vector indexing & similarity search
+numpy==1.26.4                     # array ops (faiss requires < 2.0)
+
+# ── Data & Viz ───────────────────────────────────────────────────────────────
+pandas==2.2.2
+matplotlib==3.9.0
+scikit-learn==1.5.1               # TSNE for embedding visualization
+
+# ── Notebook ─────────────────────────────────────────────────────────────────
+jupyter==1.1.1
+ipykernel==6.29.4
+
+# ── Optional: Pinecone (Section 9 of notebook) ───────────────────────────────
+# pinecone-client==3.2.2          # uncomment to run the Pinecone section

@@ -26,7 +26,7 @@ The pipeline is designed to intake dirty, unformatted datasets (specifically tes
 ```text
 📁 Project Directory
  ├── 📄 README.md                             # Project documentation
- ├── 📓 data_ingestion_pipeline.ipynb         # The main Jupyter Notebook pipeline
+ ├── 📓 Task_4.ipynb                          # The main Jupyter Notebook pipeline
  ├── 📊 car-sales-extended-missing-data.csv   # Raw input dataset
  └── 📈 cleaned_car_sales.csv                 # Cleaned output dataset (Generated)
 
