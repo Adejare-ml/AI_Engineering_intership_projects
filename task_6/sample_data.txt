@@ -1,0 +1,9 @@
+This is a sample document about the history and evolution of Artificial Intelligence.
+
+Artificial Intelligence (AI) is the simulation of human intelligence processes by machines, especially computer systems. 
+The term 'Artificial Intelligence' was coined by John McCarthy in 1956 during the Dartmouth Conference.
+AI has evolved from simple rule-based systems to complex machine learning models and deep learning architectures.
+Retrieval-Augmented Generation (RAG) is a technique used to enhance the output of a Large Language Model (LLM) by retrieving relevant information from an external knowledge base before generating a response.
+This allows the model to provide more accurate and domain-specific answers without needing to be retrained on every new piece of information.
+Vector databases, such as ChromaDB and Pinecone, are critical for RAG because they allow for efficient similarity searches using embeddings.
+Embeddings are numerical representations of text that capture semantic meaning, allowing the system to find content that is conceptually similar even if the exact words differ.
