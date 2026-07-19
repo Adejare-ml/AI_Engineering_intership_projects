@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Document Intelligence - Pitch Deck</title>
+    <!-- Reveal.js styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css">
+    <style>
+        .reveal h1, .reveal h2, .reveal h3 {
+            font-family: 'Outfit', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .reveal h1 {
+            background: linear-gradient(135deg, #5eead4 0%, #7289da 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .accent {
+            color: #5eead4;
+        }
+        .reveal p, .reveal li {
+            color: #e2e8f0;
+            font-size: 24px;
+            line-height: 1.6;
+        }
+        .slide-container {
+            text-align: left;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Slide 1 -->
+            <section data-background-color="#0b0c10">
+                <h1>AURA</h1>
+                <h3>Document Intelligence & Chat Portal</h3>
+                <p>Enterprise AI Engineering Curriculum Capstone</p>
+                <p style="font-size: 18px; margin-top: 50px; color: #475569;">Prepared by: Daniel Jare, Lead AI Engineer</p>
+            </section>
+            
+            <!-- Slide 2 -->
+            <section data-background-color="#0b0c10">
+                <div class="slide-container">
+                    <h2>The <span class="accent">Problem</span></h2>
+                    <ul style="margin-top: 30px;">
+                        <li><strong>Unstructured Data Overload:</strong> Companies spend hours reading complex PDF/TXT documents.</li>
+                        <li><strong>API Latency:</strong> Standard LLM network calls take 2-4 seconds per response, violating SLAs.</li>
+                        <li><strong>Context Loss:</strong> Traditional chatbots cannot query files while retaining dialogue state.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Slide 3 -->
+            <section data-background-color="#0b0c10">
+                <div class="slide-container">
+                    <h2>The <span class="accent">Solution</span>: Aura Portal</h2>
+                    <ul style="margin-top: 30px;">
+                        <li><strong>Document Ingestion:</strong> Automatic parsing of PDF & TXT documents.</li>
+                        <li><strong>Automated Workflows:</strong> Multi-step summarization, takeaway, and recommendation extraction.</li>
+                        <li><strong>Contextual Chat:</strong> Stateful multi-turn conversation tracking referencing document data.</li>
+                        <li><strong>Redis Caching:</strong> Sub-5ms caching layer optimizing latency by 99.8%.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Slide 4 -->
+            <section data-background-color="#0b0c10">
+                <div class="slide-container">
+                    <h2>Technical <span class="accent">Architecture</span></h2>
+                    <pre style="background: #1e1e24; padding: 20px; border-radius: 12px; font-size: 16px; color: #7289da;">
+[ Spring Boot Gateway (8080) ]
+              │
+              ▼ (Proxy HTTP POST)
+[ FastAPI Backend Service (8000) ]
+        ├───▶ [ Redis Cache (6379) ] (Fast HIT)
+        └───▶ [ Gemini 2.5 Flash API ] (Contextual MISS)
+                    </pre>
+                </div>
+            </section>
+            
+            <!-- Slide 5 -->
+            <section data-background-color="#0b0c10">
+                <div class="slide-container">
+                    <h2>Performance <span class="accent">Benchmarks</span></h2>
+                    <ul style="margin-top: 30px;">
+                        <li><strong>Cache MISS Latency:</strong> 1500ms - 2500ms (Gemini API network call)</li>
+                        <li><strong>Cache HIT Latency:</strong> <strong class="accent">&lt; 5ms</strong> (Redis retrieval)</li>
+                        <li><strong>Latency Reduction:</strong> 99.8% speedup</li>
+                        <li><strong>Automated Coverage:</strong> FastAPI integration tests built on pytest.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Slide 6 -->
+            <section data-background-color="#0b0c10">
+                <h1>Thank You</h1>
+                <p>Questions & Live Demonstration</p>
+                <p style="margin-top: 30px; font-size: 16px; color: #475569;">Open `presentation_slides.html` in browser to run slide transitions</p>
+            </section>
+        </div>
+    </div>
+    
+    <!-- Reveal.js scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            transition: 'slide'
+        });
+    </script>
+</body>
+</html>

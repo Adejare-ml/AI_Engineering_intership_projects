@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+redis
+requests
+pypdf
+pytest
+httpx
+python-multipart

@@ -1,0 +1,14 @@
+graph TD
+    A[Input Document: sample_doc.txt] --> B(Workflow Controller)
+    B --> C[Summarization Agent]
+    B --> D[Action Item Extraction Agent]
+    B --> E[Risk & Recommendation Agent]
+    
+    C --> F(Synthesizer Layer)
+    D --> F
+    E --> F
+    
+    F --> G[Output Report: analysis_report.md]
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style G fill:#bbf,stroke:#333,stroke-width:2px

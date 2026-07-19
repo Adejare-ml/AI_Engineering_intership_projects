@@ -6,6 +6,11 @@
 
 ---
 
+## About
+This educational project breaks down the core structural components and data flows inside Modern Large Language Models (LLMs) into simple, plain English. It guides students through the tokenization process, the mathematical self-attention mechanism, the stacked transformer block architecture, and token prediction loops. It features detailed markdown tables, step-by-step guides, and custom architecture diagrams.
+
+---
+
 ## Table of Contents
 
 1. [Overview](#overview)
@@ -63,7 +68,7 @@ When the model reads a sentence, it does not look at each word in isolation. For
 Sentence: "The dog chased the cat because it was hungry."
 ```
 
-When the model processes the word **"it"**, attention helps it figure out that *"it"* refers to **"dog"** — not *"cat"* or *"cat"*. It does this by assigning a score (called an **attention weight**) to every other word.
+When the model processes the word **"it"**, attention helps it figure out that *"it"* refers to **"dog"** — not *"cat"*. It does this by assigning a score (called an **attention weight**) to every other word.
 
 ```
 Processing "it":
@@ -164,15 +169,10 @@ This is why AI responses appear word-by-word when you watch them generate in rea
 
 ---
 
-
----
-
 ## 6. Visual Diagram
 
 ![LLM Pipeline](llm_pipeline.jpg)
----
 
----
 A colour-coded interactive version of this diagram is available as `llm_pipeline.drawio`.
 Open it at [app.diagrams.net](https://app.diagrams.net) — no login required.
 
@@ -184,7 +184,7 @@ Open it at [app.diagrams.net](https://app.diagrams.net) — no login required.
 |---|----------|-----------------|----------|
 | 1 | [Transformers & Attention (Video)](https://youtu.be/eMlx5fFNoYc) | 3Blue1Brown | Conceptual foundation for attention and transformer stacks |
 | 2 | [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) | Jay Alammar | Technical detail on encoder/decoder structure and self-attention |
-| 3| [Embeddings & Tokenization Guide](https://platform.openai.com/docs/guides/embeddings) | OpenAI | Tokenization concept and number-vector conversion |
+| 3 | [Embeddings & Tokenization Guide](https://platform.openai.com/docs/guides/embeddings) | OpenAI | Tokenization concept and number-vector conversion |
 | 4 | [Transformers Documentation](https://huggingface.co/docs/transformers/index) | Hugging Face | Definition of transformer as the framework for state-of-the-art LLMs |
 
 ---
@@ -193,8 +193,8 @@ Open it at [app.diagrams.net](https://app.diagrams.net) — no login required.
 
 ```
 project/
-├── README.md ← This file
-└── llm_pipeline.drawio ← Editable diagram (open in diagrams.net) and  jpg
+├── README.md
+└── llm_pipeline.drawio
 ```
 
 ---
