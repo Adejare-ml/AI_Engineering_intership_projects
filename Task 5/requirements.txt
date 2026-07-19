@@ -3,6 +3,6 @@ faiss-cpu==1.8.0
 numpy==1.26.4
 pandas==2.2.2
 matplotlib==3.9.0
-scikit-learn==1.5.1
+scikit-learn==1.9.0
 jupyter==1.1.1
 ipykernel==6.29.4
