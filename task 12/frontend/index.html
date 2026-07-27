@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura - Premium AI Chatbot</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glow">
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+    </div>
+    
+    <div class="chat-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text">AURA</span>
+            </div>
+            
+            <div class="session-info">
+                <h3>Session State</h3>
+                <div class="session-badge" id="session-display">default_session</div>
+                <button class="new-chat-btn" onclick="startNewSession()">New Conversation</button>
+            </div>
+            
+            <div class="footer-credit">
+                AI Internship Portal<br>© 2026 Daniel Jare
+            </div>
+        </div>
+        
+        <!-- Main Chat Area -->
+        <div class="chat-area">
+            <header class="chat-header">
+                <div class="agent-profile">
+                    <div class="avatar">AI</div>
+                    <div>
+                        <h2>Aura Assistant</h2>
+                        <p class="status"><span class="dot"></span> Online (Gemini 2.5 Flash)</p>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Messages Container -->
+            <div class="messages-container" id="messages-box">
+                <div class="message system-msg">
+                    <p>Welcome! I am Aura, your context-aware intelligent assistant. Ask me anything to begin our dialogue.</p>
+                </div>
+            </div>
+            
+            <!-- Input Area -->
+            <div class="input-container">
+                <form id="chat-form" onsubmit="sendMessage(event)">
+                    <input type="text" id="user-input" placeholder="Type a message or request insights..." autocomplete="off" required>
+                    <button type="submit" id="send-btn">
+                        <span class="btn-icon">⚡</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
